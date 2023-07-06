@@ -1,12 +1,42 @@
-import logo from "../logo.svg";
+import logo from "../logo.png";
 import Course from "./Course";
 import Video from "./Video";
 import "../styles/css/style.css";
 
+let data = {
+  posts: [
+    {
+      id: 95,
+      shortTitle: "3توضیح کوتاه در باره رس آپ",
+      fullTitle: "the fucking world in fire",
+      description:
+        "world fire will be to hard for humans like crono virus, just fucking words",
+      videoSrc: "https://link.com",
+    },
+    {
+      id: 1,
+      shortTitle: "1توضیح کوتاه در باره رس آپ",
+      fullTitle: "the fucking world in fire",
+      description:
+        "world fire will be to hard for humans like crono virus, just fucking words",
+      videoSrc: "https://link.com",
+    },
+    {
+      id: 9,
+      shortTitle: "2توضیح کوتاه در باره رس آپ",
+      fullTitle: "the fucking world in fire",
+      description:
+        "world fire will be to hard for humans like crono virus, just fucking words",
+      videoSrc: "https://link.com",
+    },
+  ],
+};
+
+
+
 function Static_part() {
   return (
     <div className="Static_part">
-      
       <div class="progress">
         <span>&#x1F815;</span>
       </div>
@@ -30,16 +60,16 @@ function Static_part() {
       </header>
       <div class="main">
         <aside>
-          <Course title="توضیح کوتاه در باره سامانه رس آپ" />
-          <Course title="توضیح بخش رستوران" />
-          <Course title="توضیح کوتاه حسابداری" />
-          <Course title="توضیح کوتاه در باره سامانه رس آپ" />
+          {data.posts.map((item) => (
+            <Course title={item.shortTitle} Ftitle={item.fullTitle} num={item.id} />
+          ))}
         </aside>
-      <main>
-          <Video title="توضیح کوتاه در باره رس آپ" />
+        <main>
+          
+          <Video title="" desc=""/>
         </main>
       </div>
-      <footer class="fotter">
+      {/* <footer class="fotter">
         <div class="summury">
           <p>
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
@@ -62,7 +92,7 @@ function Static_part() {
             </li>
           </ul>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }

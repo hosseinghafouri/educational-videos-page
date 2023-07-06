@@ -27,6 +27,11 @@ function Video(props) {
           type="video/mp4"
         />
       </video>
+      <br></br>
+      <desc className="desc">
+        {/* <i class="bi bi-film"></i> */}
+      <p>{props.desc}</p>
+      </desc>
     </content>
   );
 }

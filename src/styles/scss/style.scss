@@ -18,11 +18,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 3rem;
+    padding: 0 3rem;
     background-color: $primaryColor;
 
     h1 {
-       @include textStyle(1.3rem, bold, $sconderyColor); 
+       @include textStyle(2rem, bold, $sconderyColor); 
     }
 
     .hamburger-menu {
@@ -43,7 +43,7 @@ body {
     align-items: center;
 
     img {
-        width: 40px;
+        width: 80px;
         border-radius: 50%;
     }
 
@@ -232,7 +232,18 @@ body {
     color: $primaryColor;
     font-size: 30px;
 }
+.course {
+    justify-content: normal !important;
+    // align-items: normal !important;
+}
+.course p {
+    margin-right: 10px;
+}
 
+.course i {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
 /* This is purely for the demo */
 //   .vid {
 //     border-radius: 4px;
